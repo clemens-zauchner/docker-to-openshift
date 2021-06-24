@@ -32,9 +32,9 @@ SECRET_KEY = env('SECRET_KEY',
                 'h8+mu_iy6%5j%7+hp**+gsq$nmy!!mjd8z_qkd94@z!%9%!+qn')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DEBUG', True)
+DEBUG = env.bool('DEBUG', False)
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", ("localhost", "127.0.0.1"))
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", ("*", "localhost", "127.0.0.1"))
 
 
 # Application definition
