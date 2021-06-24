@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: web
+  name: web
+spec:
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: web:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    contextDir: django/app/
+    git:
+      ref: main
+      uri: https://github.com/clemens-zauchner/docker-to-openshift.git
+    type: ""
+  strategy:
+    dockerStrategy: {}
+    type: ""
+  triggers:
+    - type: ConfigChange
+status:
+  lastVersion: 0
