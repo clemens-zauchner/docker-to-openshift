@@ -15,16 +15,16 @@ Options:
 	-o	Path to save OpenShift YAML files to. Default is ./openshift
 	-h	Show usage
 
-## django example
+## flask example
 
-The example in `django` comes from [awesome-compose](https://github.com/docker/awesome-compose/). 
+The example in `flask` comes from [awesome-compose](https://github.com/docker/awesome-compose/). 
 The Dockerfile is modified slightly to ensure it can be build by [Buildah](https://github.com/containers/buildah)
 (the build tool of podman and OpenShift).
 
 The `yaml` files in `openshift` have been generated using the `convert.sh` script:
 
 ```bash
-cd django
+cd flask
 ../convert.sh -f . 
 ```
 

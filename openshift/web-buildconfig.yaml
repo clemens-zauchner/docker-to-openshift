@@ -15,7 +15,7 @@ spec:
   resources: {}
   runPolicy: Serial
   source:
-    contextDir: django/app/
+    contextDir: flask/app/
     git:
       ref: main
       uri: https://github.com/clemens-zauchner/docker-to-openshift.git
