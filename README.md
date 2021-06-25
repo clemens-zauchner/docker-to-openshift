@@ -28,3 +28,22 @@ cd flask
 ../convert.sh -f . 
 ```
 
+The docker compose version can be used with the command
+
+```bash
+docker-compose -f flask/docker-compose.yaml up -d
+```
+
+This will trigger the image build and start the flask container that returns `Hello World!` on port `5000`.
+
+In OpenShift, the application can be deployed using `oc apply` using the files from this repo:
+
+```bash
+oc apply -f https://raw.githubusercontent.com/clemens-zauchner/docker-to-openshift/main/openshift/web-buildconfig.yaml \
+	-f https://raw.githubusercontent.com/clemens-zauchner/docker-to-openshift/main/openshift/web-deploymentconfig.yaml \
+	-f https://raw.githubusercontent.com/clemens-zauchner/docker-to-openshift/main/openshift/web-imagestream.yaml \
+	-f https://raw.githubusercontent.com/clemens-zauchner/docker-to-openshift/main/openshift/web-service.yaml
+```
+
+
+
